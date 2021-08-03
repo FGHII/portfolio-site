@@ -1,6 +1,6 @@
 import React from 'react';
-import headshot from './images/headshot.jpg';
-import NavLink from './NavLink';
+import background from './images/abstract-1802971_1920.jpg';
+import SideBar from './SideBar';
 //type 'npm start' to start up the app server!!!!
 
 const styles = {
@@ -14,45 +14,29 @@ const styles = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     borderRadius: 15,
-  },
-  sideBar: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    backgroundImage: 'linear-gradient(to bottom right, #9EC2D1, #246EB9)',
+  }, 
+  contentContainer: {
+    backgroundImage: `url(${background})`,
+    width: '100%',
     height: '100%',
-    width: 250,
-    borderTopLeftRadius: 15,
-    borderBottomLeftRadius: 15,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
   },
-  headerText: {
-    margin: 5,
-    fontFamily: 'Lato',
+  text: {
     color: 'white',
-  },
-  headshot: {
-    width: 125,
-    height: 125,
-    objectFit: 'cover',
-    objectPosition: 'center top',
-    borderRadius: 150,
-    marginTop: 25,
-  },
-  
+    fontFamily: 'Lato',
+  }
 }
 
 const App = props => {
   return (
     <div style={styles.app}>
-      <div style={styles.sideBar}>
-        <img style={styles.headshot} src={headshot} alt='headshot'/>
-        <h1 style={{...styles.headerText, fontSize: 32}}>Eric Klosterman</h1>
-        <h1 style={{...styles.headerText, fontSize: 26}}>Developer</h1>
-        <NavLink name={'Home'} icon={"fab fa-fort-awesome"}/>
-        <NavLink name={'About'} icon={"fas fa-user"}/>
-        <NavLink name={'Projects'} icon={"fas fa-project-diagram"}/>
-        <NavLink name={'Tech'} icon={"fas fa-cog"}/>
-        <NavLink name={'Contact'} icon={"fas fa-envelope-open"}/>
+      <SideBar />
+      <div style={styles.contentContainer}>
+        <h1 style={styles.text}>Hello, my name is Eric.</h1>
+        <h1 style={styles.text}>I make things.</h1>
       </div>
     </div>
   );

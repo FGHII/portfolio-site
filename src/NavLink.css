@@ -1,0 +1,21 @@
+.linkContainer {
+    display: 'flex';
+    width: '90%';
+    align-items: 'center';
+    justify-content: 'flex-start';
+    }
+.linkContainer:hover {
+    color: 'red';
+}
+.linkIcon {
+    margin-left: 25;
+    margin-right: 10;
+    color: 'white';
+    font-size: 26;
+    }
+.linkText {
+    color: 'white';
+    font-size: 26;
+    font-family: 'Lato';
+    margin: 15;
+    }
