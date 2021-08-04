@@ -8,14 +8,13 @@ const styles = {
         justifyContent: 'flex-start',
       },
       linkIcon: {
-        marginLeft: 25,
-        marginRight: 10,
+        margin: '0px 5px 0px 30px',
         color: 'white',
-        fontSize: 26,
+        fontSize: 22,
       },
       linkText: {
         color: 'white',
-        fontSize: 26,
+        fontSize: 22,
         fontFamily: 'Lato',
         margin: 15,
       }

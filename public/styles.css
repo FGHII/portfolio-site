@@ -1,4 +1,7 @@
 html, body {
   height: 100%;
-  background-image: repeating-linear-gradient(to bottom right, blue, purple);
+background: rgb(47,15,255);
+background: -moz-linear-gradient(135deg, rgba(47,15,255,1) 50%, rgba(99,1,145,1) 100%);
+background: -webkit-linear-gradient(135deg, rgba(47,15,255,1) 50%, rgba(99,1,145,1) 100%);
+background: linear-gradient(135deg, rgba(47,15,255,1) 50%, rgba(99,1,145,1) 100%);
 }
