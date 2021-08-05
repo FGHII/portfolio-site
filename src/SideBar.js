@@ -7,7 +7,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    backgroundImage: "linear-gradient(135deg, #BE2E30 25%, #2F65FF 100%)",
+    backgroundImage: "linear-gradient(135deg, #c21a2c 25%, #2F65FF 100%)",
     height: "100%",
     width: 300,
     borderTopLeftRadius: 15,

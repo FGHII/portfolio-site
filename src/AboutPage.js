@@ -21,6 +21,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    borderTopRightRadius: 15,
   },
   headerText: {
     fontFamily: "Lato",
@@ -32,6 +33,7 @@ const styles = {
     backgroundImage:
       "linear-gradient(180deg, rgba(212,212,212,1) 0%, #f5ecf4 15%)",
     padding: 30,
+    borderBottomRightRadius: 15,
   },
   titleText: {
     fontFamily: "Lato",

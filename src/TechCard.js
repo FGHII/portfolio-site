@@ -5,7 +5,7 @@ const styles = {
     width: 90,
     height: 90,
     display: "flex",
-    flex: "0 0 auto",
+    // flex: "0 0 auto",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
@@ -21,6 +21,7 @@ const styles = {
   },
   techCardText: {
     margin: "5px 0px 2px 0px",
+    fontSize: 15,
   },
 };
 
