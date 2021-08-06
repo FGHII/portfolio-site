@@ -3,6 +3,8 @@ import SideBar from "./SideBar";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
 import TechPage from "./TechPage";
+import ProjectsPage from './ProjectsPage';
+import ContactPage from './ContactPage';
 //type 'npm start' to start up the app server!!!!
 
 const styles = {
@@ -17,8 +19,6 @@ const styles = {
     borderRadius: 15,
   },
 };
-
-
 
 const App = (props) => {
   const [activePage, setActivePage] = useState('Home');
@@ -35,8 +35,14 @@ const selectActivePage = (activePage) => {
     About: () => {
       return <AboutPage />;
     },
+    Projects: () => {
+      return <ProjectsPage />;
+    },
     Tech: () => {
       return <TechPage />
+    },
+    Contact: () => {
+      return <ContactPage />;
     },
     default: () => {
       return <HomePage />;

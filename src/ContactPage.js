@@ -1,7 +1,5 @@
 import React from "react";
-import headerBackground from "./images/computer-1209641_1920.jpg";
-import TechCard from "./TechCard";
-import techPortfolio from './techPortfolio';
+import headerBackground from './images/meeting-1020145_1920.jpg'
 
 const styles = {
   pageContainer: {
@@ -47,46 +45,22 @@ const styles = {
     fontSize: 18,
     lineHeight: 1.5,
   },
-  attributionText: {
-    fontFamily: 'Lato',
-    fontSize: 12,
-    textAlign: 'center',
-    width: '100%',
-  },
-  techCardContainer: {
-    flex: 1,
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    flexWrap: 'wrap',
-  },
 };
 
-const TechPage = (props) => {
+const ContactPage = (props) => {
   return (
     <div style={styles.pageContainer}>
       <div style={styles.header}>
-        <h1 style={styles.headerText}>Technology</h1>
+        <h1 style={styles.headerText}>Contact</h1>
       </div>
       <div style={styles.contentContainer}>
-        <h1 style={styles.titleText}>Skills & Technologies</h1>
+        <h1 style={styles.titleText}>Contact Me</h1>
         <p style={styles.text}>
-          I am familiar with: HTML, CSS, Javascript, NodeJS, ExpressJS, ReactJS,
-          ReactNative, MongoDB, MySQL, Git, NPM, VSCode, Atom, Heroku,
-          MaterialUI.
-
-          This website was made using ReactJS, HTML, CSS, NPM, and VSCode.
+          Here's the contact page.
         </p>
-        <div style={styles.techCardContainer}>
-          {techPortfolio.map((tech) => (
-            <TechCard name={tech.name} icon={tech.icon}/>
-          ))}
-        </div>
-        <p style={styles.attributionText}>Icons provided by <a href='https://icons8.com'>Icons8.com </a> 
-        and <a href='https://www.freepik.com'>Freepik.com</a></p>
       </div>
     </div>
   );
 };
 
-export default TechPage;
+export default ContactPage;
