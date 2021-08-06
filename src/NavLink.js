@@ -21,9 +21,14 @@ const styles = {
 }
 
 const NavLink = props => {
+
+  const selectPage = (pageName) => {
+    props.sideBarHandler(pageName);
+  }
+
     return (
-        <div style={styles.linkContainer}>
-        <i style={styles.linkIcon} class={props.icon}></i>
+        <div style={styles.linkContainer} onClick={() => {selectPage(props.name)}}>
+        <i style={styles.linkIcon} className={props.icon}></i>
         <p style={styles.linkText}>{props.name}</p>
         </div>
     )

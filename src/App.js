@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import SideBar from "./SideBar";
 import HomePage from "./HomePage";
 import AboutPage from "./AboutPage";
@@ -18,11 +18,39 @@ const styles = {
   },
 };
 
+
+
 const App = (props) => {
+  const [activePage, setActivePage] = useState('Home');
+
+  const sideBarHandler = (pageName) => {
+    setActivePage(pageName);
+  }
+
+const selectActivePage = (activePage) => {
+  const pages = {
+    Home: () => {
+      return <HomePage />;
+    },
+    About: () => {
+      return <AboutPage />;
+    },
+    Tech: () => {
+      return <TechPage />
+    },
+    default: () => {
+      return <HomePage />;
+    }
+  };
+  return (pages[activePage] || pages['default'])();
+}
+
+let content = selectActivePage(activePage);
+
   return (
     <div style={styles.app}>
-      <SideBar />
-      <TechPage />
+      <SideBar sideBarHandler={sideBarHandler}/>
+      {content}
     </div>
   );
 };

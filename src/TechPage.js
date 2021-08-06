@@ -1,8 +1,7 @@
 import React from "react";
 import headerBackground from "./images/computer-1209641_1920.jpg";
 import TechCard from "./TechCard";
-import ReactNativeIcon from './images/react-native-custom.png';
-import VSCodeIcon from './images/vscode.png';
+import techPortfolio from './techPortfolio';
 
 const styles = {
   pageContainer: {
@@ -74,69 +73,14 @@ const TechPage = (props) => {
         <p style={styles.text}>
           I am familiar with: HTML, CSS, Javascript, NodeJS, ExpressJS, ReactJS,
           ReactNative, MongoDB, MySQL, Git, NPM, VSCode, Atom, Heroku,
-          MaterialUI
+          MaterialUI.
+
+          This website was made using ReactJS, HTML, CSS, NPM, and VSCode.
         </p>
         <div style={styles.techCardContainer}>
-          <TechCard
-            name={"HTML"}
-            icon={"https://img.icons8.com/color/48/000000/html-5--v1.png"}
-          />
-          <TechCard
-            name={"CSS"}
-            icon={"https://img.icons8.com/color/48/000000/css3.png"}
-          />
-          <TechCard
-            name={"Javascript"}
-            icon={"https://img.icons8.com/color/48/000000/javascript--v1.png"}
-          />
-          <TechCard
-            name={"NodeJS"}
-            icon={"https://img.icons8.com/color/48/000000/nodejs.png"}
-          />
-          <TechCard
-            name={"ExpressJS"}
-            icon={'https://www.vectorlogo.zone/logos/expressjs/expressjs-icon.svg'}
-          />
-          <TechCard
-            name={"ReactJS"}
-            icon={"https://img.icons8.com/color/48/000000/react-native.png"}
-          />
-          <TechCard
-            name={"React Native"}
-            icon={ReactNativeIcon}
-          />
-          <TechCard
-            name={"MongoDB"}
-            icon={"https://img.icons8.com/color/48/000000/mongodb.png"}
-          />
-          <TechCard
-            name={"MySQL"}
-            icon={"https://img.icons8.com/ios/50/000000/mysql.png"}
-          />
-          <TechCard
-            name={"Git"}
-            icon={"https://img.icons8.com/ios-filled/50/000000/git.png"}
-          />
-          <TechCard
-            name={"NPM"}
-            icon={"https://img.icons8.com/color/48/000000/npm.png"}
-          />
-          <TechCard
-            name={"VSCode"}
-            icon={VSCodeIcon}
-          />
-          <TechCard
-            name={"Atom"}
-            icon={"https://img.icons8.com/ios/50/000000/atom-editor.png"}
-          />
-          <TechCard
-            name={"Heroku"}
-            icon={"https://img.icons8.com/color/48/000000/heroku.png"}
-          />
-          <TechCard
-            name={"MaterialUI"}
-            icon={"https://img.icons8.com/color/48/000000/material-ui.png"}
-          />
+          {techPortfolio.map((tech) => (
+            <TechCard name={tech.name} icon={tech.icon}/>
+          ))}
         </div>
         <p style={styles.attributionText}>Icons provided by <a href='https://icons8.com'>Icons8.com </a>
          and <a href='https://www.freepik.com'>Freepik.com</a></p>

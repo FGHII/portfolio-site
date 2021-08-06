@@ -40,17 +40,19 @@ const styles = {
   }
 };
 
+
 const SideBar = (props) => {
+
   return (
     <div style={styles.sideBar}>
       <img style={styles.headshot} src={headshot} alt="headshot" />
       <h1 style={{ ...styles.headerText, fontSize: 28 }}>Eric Klosterman</h1>
       <h1 style={{ ...styles.headerText, fontSize: 22 }}>Developer</h1>
-      <NavLink name={"Home"} icon={"fab fa-fort-awesome"} />
-      <NavLink name={"About"} icon={"fas fa-user"} />
-      <NavLink name={"Projects"} icon={"fas fa-project-diagram"} />
-      <NavLink name={"Tech"} icon={"fas fa-cog"} />
-      <NavLink name={"Contact"} icon={"fas fa-envelope-open"} />
+      <NavLink name={"Home"} icon={"fab fa-fort-awesome"} sideBarHandler={props.sideBarHandler}/>
+      <NavLink name={"About"} icon={"fas fa-user"} sideBarHandler={props.sideBarHandler}/>
+      <NavLink name={"Projects"} icon={"fas fa-project-diagram"} sideBarHandler={props.sideBarHandler}/>
+      <NavLink name={"Tech"} icon={"fas fa-cog"} sideBarHandler={props.sideBarHandler}/>
+      <NavLink name={"Contact"} icon={"fas fa-envelope-open"} sideBarHandler={props.sideBarHandler}/>
       <div style={styles.externalLinkContainer}>
       <a href='https://www.linkedin.com/in/eric-klosterman/'><i style={styles.externalLink} class="fab fa-linkedin"></i></a>
       <a href='https://github.com/FGHII'><i style={styles.externalLink} class="fab fa-github-square"></i></a>
