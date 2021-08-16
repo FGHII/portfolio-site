@@ -2,16 +2,6 @@ import React from "react";
 import headerBackground from "./images/turntable-2154823_1920.jpg";
 
 const styles = {
-  pageContainer: {
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    flexDirection: "column",
-    borderTopRightRadius: 15,
-    borderBottomRightRadius: 15,
-  },
   header: {
     backgroundImage: `url(${headerBackground})`,
     backgroundSize: "100%",
@@ -48,14 +38,15 @@ const styles = {
 
 const AboutPage = (props) => {
   return (
-    <div style={styles.pageContainer}>
+    <div style={props.containerStyle}>
       <div style={styles.header}>
         <h1 style={styles.headerText}>About</h1>
       </div>
       <div style={styles.contentContainer}>
         <h1 style={styles.titleText}>About Me</h1>
         <p style={styles.text}>
-          My name is Eric Klosterman and I am a Web and App developer. I began
+          My name is Eric Klosterman and I am a Web and App developer. I'm inspired to 
+          create digital interactive experiences.  I began
           my coding journey in the Fall of 2020. My current focus is on
           Front-End Development but I also enjoy Back-End Development as well! I
           enjoy solving real-world problems with technical solutions, and

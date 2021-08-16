@@ -12,6 +12,7 @@ const styles = {
     width: 300,
     borderTopLeftRadius: 15,
     borderBottomLeftRadius: 15,
+    overflowY: 'scroll',
   },
   headerText: {
     margin: 5,

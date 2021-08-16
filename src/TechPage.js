@@ -4,16 +4,6 @@ import TechCard from "./TechCard";
 import techPortfolio from './techPortfolio';
 
 const styles = {
-  pageContainer: {
-    width: "100%",
-    height: "100%",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "flex-start",
-    flexDirection: "column",
-    borderTopRightRadius: 15,
-    borderBottomRightRadius: 15,
-  },
   header: {
     backgroundImage: `url(${headerBackground})`,
     backgroundSize: "100%",
@@ -64,7 +54,7 @@ const styles = {
 
 const TechPage = (props) => {
   return (
-    <div style={styles.pageContainer}>
+    <div style={props.containerStyle}>
       <div style={styles.header}>
         <h1 style={styles.headerText}>Technology</h1>
       </div>

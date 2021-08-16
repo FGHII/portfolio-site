@@ -10,7 +10,7 @@ import ContactPage from './ContactPage';
 const styles = {
   app: {
     display: "flex",
-    height: 625,
+    height: '95%',
     width: "95%",
     position: "absolute",
     top: "50%",
@@ -19,7 +19,18 @@ const styles = {
     borderRadius: 15,
   },
 };
-
+const containerStyles = {
+  width: "100%",
+  height: "100%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  flexDirection: "column",
+  borderTopRightRadius: 15,
+  borderBottomRightRadius: 15,
+  overflowY: 'scroll',
+}
+//make it always show the scroll bar!
 const App = (props) => {
   const [activePage, setActivePage] = useState('Home');
 
@@ -33,16 +44,16 @@ const selectActivePage = (activePage) => {
       return <HomePage />;
     },
     About: () => {
-      return <AboutPage />;
+      return <AboutPage containerStyle={containerStyles} />;
     },
     Projects: () => {
-      return <ProjectsPage />;
+      return <ProjectsPage containerStyle={containerStyles} />;
     },
     Tech: () => {
-      return <TechPage />
+      return <TechPage containerStyle={containerStyles} />
     },
     Contact: () => {
-      return <ContactPage />;
+      return <ContactPage containerStyle={containerStyles} />;
     },
     default: () => {
       return <HomePage />;

@@ -19,6 +19,8 @@ const styles = {
     fontFamily: "Lato",
     margin: "0px 0px 25px 0px",
     fontSize: 38,
+    padding: "10px 25px",
+    textAlign: 'center',
   },
   button: {
     border: "none",
